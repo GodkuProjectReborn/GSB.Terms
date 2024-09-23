@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godku Staff Terms of Service</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1b1f38;
+            color: #eaeaea;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #2a2f58;
+            transition: transform 0.4s ease-in-out;
+            transform: translateX(-100%);
+            z-index: 10;
+            padding-top: 50px;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar a {
+            display: block;
+            color: #61dafb;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #3b4378;
+            color: #ffffff;
+        }
+
+        /* Toggle Button */
+        .toggle-btn {
+            position: absolute;
+            top: 0px;
+            left: 3px;
+            background-color: transparent;
+            border: 2px solid #61dafb;
+            color: #61dafb;
+            font-size: 24px;
+            padding: px;
+            cursor: pointer;
+            z-index: 11;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background-color: #61dafb;
+            color: #0a1128;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 0;
+            padding: 40px;
+            flex: 1;
+            overflow-y: auto;
+            max-height: 100vh;
+            transition: margin-left 0.4s ease-in-out;
+        }
+
+        .sidebar.open + .main-content {
+            margin-left: 250px;
+        }
+
+        /* License Text */
+        h1 {
+            color: #61dafb;
+            font-size: 30px;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #d3d3d3;
+        }
+
+        .code-style {
+            background-color: #2a2f58;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: #b8c1ff;
+            font-family: 'Courier New', monospace;
+        }
+
+        .sidebar, .main-content {
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .toggle-btn {
+                font-size: 18px;
+                padding: 8px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <a href="https://discord.gg/godkuprojectreborn" target="_blank">Discord</a>
+        <a href="https://discord.gg/nTU6JP4C9g" target="_blank">Discord Ban Appeals</a>
+        <a href="https://github.com/godkuprojectreborn" target="_blank">GitHub</a>
+    </div>
+
+    <!-- Toggle Button -->
+    <button class="toggle-btn" id="toggle-btn">☰</button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <h1>Godku Staff Terms of Service</h1>
+        <h2>Version 1.0 - September 2024</h2>
+        <p><strong>http://www.discord.gg/godkuprojectreborn</strong></p>
+        
+        <div class="code-style">
+            <p><strong>TERMS AND CONDITIONS FOR STAFF, STAFF BEHAVIOR, AND STAFF ACTIVITY</strong></p>
+            <p><strong>1. UNDERSTANDING WHAT IT MEANS TO BE A STAFF</strong></p>
+            <p>If you're a staff of Godku, then you must promise to be respectful to all staff, members, and partners. If you can't even do that, you'll probably be demoted instantly. Make sure to NEVER cause or join any conflict with staff, members, partners, or other servers by bringing it to us. Also, if you are inactive for at least 5 days, you'll most likely be demoted.</p>
+            <p><strong>2. BEHAVIOR AND CONDUCT</strong></p>
+            <p>Staff must maintain a professional and helpful attitude at all times. Any form of disrespect, hostility, or misbehavior will not be tolerated. Always remember that your actions represent Godku. Ensure that you're active and available to assist members when needed. Absenteeism without proper notice will result in warnings or demotion.</p>
+            <p><strong>3. CONTRIBUTION TO THE COMMUNITY</strong></p>
+            <p>Being a staff member means actively contributing to the community. Whether it’s resolving issues, moderating chat, or organizing events, your involvement is crucial to the growth of Godku. Lack of involvement or abuse of privileges will lead to necessary actions being taken.</p>
+            <p><strong>4. COMMUNICATION AND TRANSPARENCY</strong></p>
+            <p>Communication is key. You must stay in touch with other staff members and the server owner. Avoid miscommunication, and if there are any disputes or issues, raise them with the appropriate channels rather than discussing them publicly.</p>
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggle-btn');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('main-content');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            mainContent.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
